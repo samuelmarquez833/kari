@@ -1,0 +1,27 @@
+  <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Logo -->
+            <a href="/" class="header__logo">
+                <svg class="header__logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span class="header__logo-text">KARI</span>
+            </a>
+
+            <!-- Navegación -->
+            <nav class="header__nav">
+                <a href="#acerca" class="header__nav-link">Acerca de</a>
+
+                <% if (user) { %>
+                    <span class="header__user">Hola, <%= user.email %></span>
+                    
+                    <form action="/auth/logout" method="post">
+                        <button class="header__nav-cta" >Salir</button>
+                    </form>
+                <% } else { %>
+                    <a href="/auth/login" class="header__nav-cta">Comenzar</a>
+                <% } %>
+            </nav>
+        </div>
+    </header>

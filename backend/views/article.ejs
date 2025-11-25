@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARI - Piensa Antes de Compartir</title>
+
+    <!-- CSS principal de esta página -->
+    <link rel="stylesheet" href="/css/article.css">
+    <link rel="stylesheet" href="/css/header.css">
+    
+</head>
+<body>
+
+    <!-- NAV YA LO TIENES HECHO -->
+    <%- include('partials/nav'); %>
+
+    <main class="article-container">
+
+        <!-- TÍTULO -->
+        <h1 class="article-title"><%= all.title %></h1>
+
+        <!-- FECHA -->
+        <p class="article-date">
+            Publicado el:
+            <%= new Date(all.date).toLocaleDateString("es-MX", {
+                    year: "numeric", month: "long", day: "numeric"
+            }) %>
+        </p>
+
+        <!-- CONTENIDO -->
+        <div class="article-content">
+            <%= all.content %>
+        </div>
+
+        <!-- COMENTARIOS -->
+        <section class="comments-section">
+            <h2>Comentarios (<%= all.comments.length %>)</h2>
+
+            <% if (all.comments.length === 0) { %>
+                <p class="no-comments">Aún no hay comentarios.</p>
+            <% } %>
+
+            <% all.comments.forEach(c => { %>
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <span class="comment-user">@<%= c.username %></span>
+                        <span class="comment-date">
+                            <%= new Date(c.created_at).toLocaleString("es-MX") %>
+                        </span>
+                    </div>
+
+                    <p class="comment-text"><%= c.content %></p>
+                </div>
+            <% }); %>
+        </section>
+
+        <!-- FORM PARA AGREGAR COMENTARIO -->
+        <section class="comment-form-section">
+            <h3>Deja un comentario</h3>
+
+            <form action="/c/articles/<%= all.id %>/comments" method="POST" class="comment-form">
+                <textarea name="comment" required placeholder="Escribe algo..."></textarea>
+
+                <button type="submit">Comentar</button>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>

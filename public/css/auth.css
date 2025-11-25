@@ -1,0 +1,182 @@
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #f4f8f6;
+    color: #172b35;
+}
+
+/* ===== MAIN WRAPPER ===== */
+.login {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.login__container {
+    max-width: 640px;
+    text-align: center;
+}
+
+/* ===== Top badge ===== */
+.login__badge {
+    display: inline-block;
+    background-color: #e0f3e7;
+    color: #157347;
+    padding: 0.25rem 1rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Titles ===== */
+.login__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.login__subtitle {
+    color: #4b626f;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 36rem;
+    margin: 0 auto 2rem;
+}
+
+/* ===== Card ===== */
+.login__card {
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 0 auto 2rem;
+    max-width: 420px;
+    text-align: left;
+}
+
+.login__card-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.login__card-desc {
+    color: #56727f;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Form ===== */
+.login__label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.login__input-wrap {
+    background: #f1f5f4;
+    padding: 0.55rem 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.login__input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+/* ===== Extras ===== */
+.login__extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 0.82rem;
+}
+
+.login__remember input {
+    margin-right: 0.35rem;
+}
+
+.login__forgot {
+    color: #0f9f5b;
+    text-decoration: none;
+}
+
+/* ===== Submit button ===== */
+.login__submit {
+    width: 100%;
+    background-color: #0f9f5b;
+    color: #ffffff;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.login__submit:hover {
+    background-color: #0c7c46;
+}
+
+/* ===== Register text ===== */
+.login__register {
+    margin-top: 1.2rem;
+    text-align: center;
+    font-size: 0.88rem;
+}
+
+.login__register a {
+    color: #0f9f5b;
+    text-decoration: none;
+}
+
+/* ===== Continue without login ===== */
+.login__continue {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.login__continue-btn {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid #cdd9d4;
+    color: #172b35;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #ffffff;
+}
+
+
+
+/* Error message */
+.login__error {
+    margin-top: 20px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #ffe5e5;
+    border: 1px solid #ffb3b3;
+}
+
+.login__error-text {
+    margin: 0;
+    color: #c62828;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+}

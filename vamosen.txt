@@ -1,0 +1,42 @@
+
+
+- app.js
+helmet
+cors
+aqui facil hay mas cosas
+
+
+
+
+
+- middleware
+express-validator
+aqui facil hay mas cosas pero me valen verga 
+
+
+
+
+
+
+
+-------------------------------------
+
+
+
+
+
+como le hacemos para que sepa cuando sepa que puede subir comentarios y cuando no
+
+seguirdad
+
+
+iconos de los articulso en
+/articles/
+
+
+acerda de a donde me lleva????? 
+links a redes
+
+revisar que este bien todo
+que las cosas esten donde deben
+

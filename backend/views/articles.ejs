@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARI - Piensa Antes de Compartir</title>
+
+    <!-- CSS principal de esta página -->
+    <link rel="stylesheet" href="/css/articles.css">
+    <link rel="stylesheet" href="/css/header.css">
+    
+</head>
+<body>
+
+    <%- include('partials/nav') %>
+
+    <main class="modules">
+        <div class="modules__header">
+            <h2 class="modules__title">Articulos de KARI</h2>
+            <p class="modules__subtitle">Tu plataforma de aprendizaje sobre ciberseguridad y alfabetización digital. Aquí encontrarás todo lo necesario para protegerte en línea.</p>
+        </div>
+
+        <% if (error) { %>
+
+        <div class="modules__error-section">
+            <p class="modules__error--title">404</p>
+            <p class="modules__error">Error al cargar los artículos.</p>
+        </div>
+
+        <% } else { %>
+            <div class="modules__grid">
+                <% all.forEach(article => { %>
+                <article class="module-card">
+                    
+                    <div class="module-card__icon-wrapper">
+                        <svg class="header__logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+
+                    <h3 class="module-card__title"><%= article.title %></h3>
+
+                    <p class="module-card__desc"><%= article.desc %></p>
+
+                    <a href="/articles/<%= article.id %>" class="module-card__button">
+                        Leer el articulo
+                    </a>
+                </article>
+                <% }) %>
+            </div>
+        <% } %>
+    </main>
+
+    
+</body>
+</html>

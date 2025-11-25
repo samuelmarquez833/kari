@@ -1,0 +1,197 @@
+
+
+.modules {
+    display: flex;
+    flex-direction: column;
+}
+
+.modules__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 1.5rem 0 1.6rem;
+}
+
+.modules__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.modules__subtitle {
+
+    font-size: 1rem;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modules__error-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.modules__error--title{
+    font-size: 404px;
+}
+
+.modules__error {
+    padding: 1rem;
+    background: #ffe5e5;
+    border: 1px solid #ffb3b3;
+    color: #b30000;
+    border-radius: .5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modules__grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+}
+
+
+/* CARD */
+.module-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin:  0 1.6rem 0 1.6rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: all .2s;
+}
+
+.module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.09);
+}
+
+.module-card__icon-wrapper {
+    width: 55px;
+    height: 55px;
+    border-radius: 1rem;
+    background: #f0faf7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .8rem;
+}
+
+.module-card__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.module-card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    color: #1a1a1a;
+}
+
+.module-card__desc {
+    font-size: .95rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+.module-card__button {
+    display: block;
+    background: #009688;
+    color: #fff;
+    text-align: center;
+    padding: .7rem 1rem;
+    border-radius: .6rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background .2s;
+}
+
+.module-card__button:hover {
+    background: #00796b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 640px) {
+    .modules__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .modules__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .modules__header {
+        text-align: center;
+    }
+}

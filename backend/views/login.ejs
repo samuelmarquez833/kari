@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARI - Iniciar Sesión</title>
+
+    <!-- CSS de esta página -->
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+</head>
+
+<body class="page">
+
+    <%- include('partials/nav') %>
+
+    <!-- MAIN -->
+    <main class="login">
+
+        <div class="login__container">
+
+            <!-- Badge -->
+             <!-- BORRAR ESTA PUTA MADRE Y SU CSS -->
+            <div class="login__badge">
+                Iniciativa de Alfabetización Digital
+            </div>
+
+            <!-- Title -->
+            <h1 class="login__title">
+                Piensa Antes de Compartir
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="login__subtitle">
+                Empoderando a los jóvenes para identificar, comprender y combatir la desinformación en la era digital.
+            </p>
+
+            <!-- CARD -->
+            <div class="login__card">
+
+                <h2 class="login__card-title">Iniciar Sesión</h2>
+                <p class="login__card-desc">
+                    Accede a tu cuenta para continuar aprendiendo sobre ciberseguridad
+                </p>
+
+                <form class="login__form" method="POST" action="/auth/login">
+
+                    <!-- EMAIL -->
+                    <label class="login__label">Username</label>
+                    <div class="login__input-wrap">
+                        <input class="login__input" type="username" name="username" placeholder="tu@email.com" required>
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <label class="login__label">Contraseña</label>
+                    <div class="login__input-wrap">
+                        <input class="login__input" type="password" name="password" required>
+                    </div>
+
+                    <div class="login__extras">
+                        <label class="login__remember">
+                            <input type="checkbox" name="remember">
+                            Recordarme
+                        </label>
+
+                        <a href="#" class="login__forgot">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button class="login__submit" type="submit">
+                        Iniciar Sesión
+                    </button>
+
+
+
+
+                    
+                </form>
+
+                <p class="login__register">
+                    ¿No tienes cuenta? <a href="/auth/register">Regístrate aquí</a>
+                </p>
+            </div>
+
+            <!-- Continue without login -->
+            <div class="login__continue">
+                <p>O explora sin iniciar sesión</p>
+                <a href="/" class="login__continue-btn">Continuar en la web</a>
+            </div>
+            <% if (res){ %>
+                <div class="login__error">
+                    <p class="login__error-text">Credenciales incorrectas</p>
+                </div>
+            <% } %>
+
+        </div>
+    </main>
+
+
+</body>
+</html>

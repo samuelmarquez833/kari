@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARI - Piensa Antes de Compartir</title>
+
+    <!-- CSS principal de esta página -->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body class="page">
+
+    <%- include('partials/nav') %>
+
+    <!-- MAIN -->
+    <main class="page__main">
+        <section class="hero" id="acerca">
+            <div class="hero__container">
+
+                <div class="hero__badge">
+                    Iniciativa de Alfabetización Digital
+                </div>
+
+                <h1 class="hero__title">
+                    Piensa Antes de Compartir
+                </h1>
+
+                <p class="hero__subtitle">
+                    Empoderando a los jóvenes para identificar, comprender y combatir la
+                    desinformación en la era digital. Aprende las habilidades para navegar la
+                    información de manera crítica.
+                </p>
+
+                <div class="hero__actions">
+                    <a href="/articles/" class="button button--primary">
+                        Comenzar a Aprender
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Solo marcas los anchors para que la nav no rompa -->
+        
+        <section class="stats">
+            <div class="stats__container">
+
+                <div class="stats__item">
+                    <p class="stats__number">73%</p>
+                    <p class="stats__text">
+                        de los adolescentes encuentran<br>
+                        desinformación semanalmente
+                    </p>
+                </div>
+
+                <div class="stats__item">
+                    <p class="stats__number">2.5x</p>
+                    <p class="stats__text">
+                        más rápida propagación de<br>
+                        noticias falsas vs. verdad
+                    </p>
+                </div>
+
+                <div class="stats__item">
+                    <p class="stats__number">64%</p>
+                    <p class="stats__text">
+                        tienen dificultad para<br>
+                        identificar contenido falso
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <section class="protect">
+        <div class="protect__header">
+            <h2 class="protect__title">Valores o no se que pedo</h2>
+            <p class="protect__subtitle">
+                Domina estas habilidades esenciales para navegar el mundo digital con confianza y discernimiento.
+            </p>
+        </div>
+
+        <div class="protect__grid">
+
+            <!-- Card 1 -->
+            <article class="protect-card">
+                <div class="protect-card__icon">
+                    🔍
+                </div>
+                <h3 class="protect-card__title">Verificar Fuentes</h3>
+                <p class="protect-card__text">
+                    Aprende a verificar la credibilidad de las fuentes de información y contrastar afirmaciones antes de creer o compartir.
+                </p>
+                <a class="protect-card__link" href="#">
+                    Aprender Más →
+                </a>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="protect-card">
+                <div class="protect-card__icon">
+                    🧠
+                </div>
+                <h3 class="protect-card__title">Pensamiento Crítico</h3>
+                <p class="protect-card__text">
+                    Desarrolla habilidades para analizar contenido objetivamente, reconocer sesgos y cuestionar titulares sensacionalistas.
+                </p>
+                <a class="protect-card__link" href="#">
+                    Aprender Más →
+                </a>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="protect-card">
+                <div class="protect-card__icon">
+                    ⚠️
+                </div>
+                <h3 class="protect-card__title">Detectar Señales de Alerta</h3>
+                <p class="protect-card__text">
+                    Identifica tácticas comunes usadas en la desinformación como manipulación emocional, imágenes falsas y estadísticas engañosas.
+                </p>
+                <a class="protect-card__link" href="#">
+                    Aprender Más →
+                </a>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="protect-card">
+                <div class="protect-card__icon">
+                    👥
+                </div>
+                <h3 class="protect-card__title">Compartir Responsable</h3>
+                <p class="protect-card__text">
+                    Comprende el impacto de difundir información falsa y aprende a ser un ciudadano digital responsable.
+                </p>
+                <a class="protect-card__link" href="#">
+                    Aprender Más →
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer__container">
+
+            <!-- Brand -->
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="/img/logo.svg" alt="KARI">
+                </div>
+
+                <p class="footer__desc">
+                    Empoderando la alfabetización digital para la próxima generación.
+                </p>
+
+                <a href="/contacto" class="footer__contact-btn">
+                    <span class="footer__contact-icon">📩</span>
+                    Contactar
+                </a>
+            </div>
+
+            <!-- Columns -->
+            <div class="footer__columns">
+                
+                <div class="footer__column">
+                    <h4 class="footer__title">Aprender</h4>
+                    <ul class="footer__list">
+                        <li><a href="#comenzar">Comenzar</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#quizzes">Quizzes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Recursos</h4>
+                    <ul class="footer__list">
+                        <li><a href="#verificacion">Herramientas de Verificación</a></li>
+                        <li><a href="#investigacion">Investigación</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Acerca de</h4>
+                    <ul class="footer__list">
+                        <li><a href="#mision">Nuestra Misión</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="/privacidad">Privacidad</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer__bottom">
+            © 2025 KARI. Construyendo una comunidad digital más informada.
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
