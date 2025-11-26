@@ -9,6 +9,7 @@ import { fileURLToPath } from "url";
 import authRoutes from './routes/auth.routes.js';
 import commentsRoutes from './routes/comments.routes.js';
 import articlesRoutes from './routes/articles.routes.js';
+import aboutRoutes from './routes/about.routes.js';
 
 import middleware from './middleware/aja.js';
 
@@ -51,6 +52,7 @@ app.get("/",  middleware.aja, (req, res) => {
   //console.log(req);
 });
 
+app.use('/about', middleware.aja, aboutRoutes)
 app.use('/auth', middleware.aja, authRoutes);
 app.use('/articles', middleware.aja, articlesRoutes);
 app.use('/c', middleware.aja, commentsRoutes);

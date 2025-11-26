@@ -10,12 +10,6 @@ export async function getArticles(req, res, next) {
         
         const descs = [];
 
-        db_call.forEach(article => {
-            const short = article.body.split(" ").slice(0, 10).join(" ") + "...";
-            article.desc = short; 
-        });
-
-
         
         res.render('articles', {
             error: false,

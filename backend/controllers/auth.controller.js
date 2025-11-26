@@ -6,12 +6,17 @@ export async function register(req, res, next) {
     try {
         
         const user = await authService.registerUser(username, password);        
-        req.session.user = { id: user.id };
+
+        req.session.user = {
+            id: user.id,
+            username: user.username || username,
+        };
         
         // console.log(req.session.userId);
 
 
-        return res.redirect("/");
+        return res.redirect("/"); 
+    
         /*
         res.status(201).json({
             message: 'Usuario registrado y logueado',
@@ -45,8 +50,12 @@ export async function login(req, res, next) {
         const user = await authService.loginUser(username, password);
 
 //        req.session.user = { id: user.id };
-        req.session.user = user.id;
-        return res.redirect("/");
+        req.session.user = {
+            id: user.id,
+            username: user.username || username,
+        };
+
+        return res.redirect("/"); // aquí NO se pasan datos, SOLO se redirige
 
         /*res.status(201).json({
             essage: 'Usuario logueado',

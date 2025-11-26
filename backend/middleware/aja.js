@@ -1,7 +1,7 @@
 
 
 export function aja (req, res, next){
-    console.log(req.session);
+    res.locals.user = req.session.user || null; // user estará disponible en TODOS los .ejs
     next();
 }
 

@@ -11,10 +11,10 @@
 
             <!-- Navegación -->
             <nav class="header__nav">
-                <a href="#acerca" class="header__nav-link">Acerca de</a>
+                <a href="/about/" class="header__nav-link">Acerca de</a>
 
                 <% if (user) { %>
-                    <span class="header__user">Hola, <%= user.email %></span>
+                    <span class="header__user">Hola, <%= user.username %></span>
                     
                     <form action="/auth/logout" method="post">
                         <button class="header__nav-cta" >Salir</button>
