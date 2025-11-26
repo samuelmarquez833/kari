@@ -1,0 +1,126 @@
+
+
+
+/* =============================
+   FOOTER
+============================= */
+
+.footer {
+    background-color: #f9fdfb;
+    padding: 60px 20px 30px;
+    border-top: 1px solid #e5ece8;
+    margin-top: 80px;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+/* Brand */
+.footer__brand {
+    max-width: 260px;
+}
+
+.footer__logo img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer__desc {
+    margin: 15px 0 20px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #375a52;
+}
+
+.footer__contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid #b8d5c7;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: #2b5c4d;
+    background: #ffffff;
+    transition: 0.25s ease;
+}
+
+.footer__contact-btn:hover {
+    background: #e9f7f0;
+}
+
+/* Columns */
+.footer__columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.footer__title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #12382e;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__list li {
+    margin-bottom: 10px;
+}
+
+.footer__list a {
+    text-decoration: none;
+    color: #356b5c;
+    font-size: 0.95rem;
+    transition: 0.25s;
+}
+
+.footer__list a:hover {
+    color: #1b4e40;
+}
+
+/* Bottom */
+.footer__bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e5ece8;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #52726a;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+@media (max-width: 900px) {
+    .footer__container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__columns {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

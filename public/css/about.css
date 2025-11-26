@@ -1,0 +1,135 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f3f7f4;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* ====== HERO ====== */
+
+.about-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.about-hero__badge {
+  display: inline-block;
+  background: #dff3e4;
+  color: #147a45;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.about-hero__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.about-hero__subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== STORY ====== */
+
+.about-story {
+  padding: 2rem 0 4rem;
+}
+
+.about-story__inner {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.about-story__block {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+}
+
+.about-story__title {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-story__text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+@media (min-width: 768px) {
+  .about-hero__title {
+    font-size: 2.6rem;
+  }
+
+  .about-stats__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-story__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-hero {
+    padding: 5rem 0 3rem;
+  }
+
+  .about-story__title {
+    font-size: 1.6rem;
+  }
+
+  .about-story__text {
+    font-size: 1.05rem;
+  }
+}
