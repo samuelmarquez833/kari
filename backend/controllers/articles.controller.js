@@ -14,7 +14,6 @@ export async function getArticles(req, res, next) {
         res.render('articles', {
             error: false,
             all: db_call,
-            
         });
         
 
