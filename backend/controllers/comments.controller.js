@@ -24,12 +24,9 @@ export async function createComment(req, res, next) {
     const positive_output_i_guess = await authService.createCommentService(articleId, comment, userId.id);
     db_response = await articlesService.getSingleArticleService(articleId);
     const message = positive_output_i_guess.message;
-        
-        res.render('article', {
-            error: false,
-            message: message,
-            all: db_response  
-        });
+  
+    
+    res.redirect(`/articles/${articleId}`);
 
     } catch(error){
         console.log(error)
